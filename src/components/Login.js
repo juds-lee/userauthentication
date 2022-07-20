@@ -5,6 +5,7 @@ import { useAuth } from "../contexts/AuthContexts";
 import { Link, useNavigate } from "react-router-dom";
 
 
+
 const Login = () => {
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -23,6 +24,7 @@ const Login = () => {
       navigate("/")
     }catch {
      setError("Failed to log in")
+     
     }
      setLoading(false)
      }

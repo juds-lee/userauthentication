@@ -17,15 +17,15 @@ function App() {
         <Router>
           <AuthProvider>
             <Routes>
+              <Route path="/" element={<Dashboard/>} />
               <Route path="/signup" element={<Signup/>} />
               <Route path="/login" element={<Login/>} />
-              <Route exact path="/"element={<Dashboard/>} />
-              
             </Routes>
           </AuthProvider>
         </Router>
       </div>
     </Container>
+    
   );
 }
 
