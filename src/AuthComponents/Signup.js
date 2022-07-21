@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useRef } from "react";
 import { useAuth } from "../contexts/AuthContexts";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "react-bootstrap";
 
 const Signup = () => {
     const emailRef = useRef();
@@ -61,12 +60,12 @@ const Signup = () => {
             >
             </input>
 
-            <Button disabled={loading} className="w-100" type="submit">
+            <button disabled={loading} type="submit">
               Sign Up
-            </Button>
+            </button>
         </form>
     
-      <div className="w-100 text-center mt-2">
+      <div>
         Already have an account? <Link to="/login">Log In</Link>
       </div>
     </div>

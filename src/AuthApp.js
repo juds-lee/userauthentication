@@ -6,16 +6,11 @@ import React from "react";
 import PrivateRoute from "./AuthComponents/PrivateRoute";
 import { AuthProvider } from "./contexts/AuthContexts";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Container } from "react-bootstrap";
 
 
 function App() {
   return (
-    <Container
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
-   >
-      <div>
+      <div >
         <Router>
           <AuthProvider>
             <Routes>
@@ -32,9 +27,7 @@ function App() {
             </Routes>
           </AuthProvider>
         </Router>
-      </div>
-    </Container>
-    
+      </div>  
   );
 }
 

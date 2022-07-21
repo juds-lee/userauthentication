@@ -10,10 +10,6 @@
     height: 0;
 }
 
-* {
-    box-sizing: revert !important;
-}
-
 #root {
     position: relative;
 }

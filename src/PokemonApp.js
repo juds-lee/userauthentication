@@ -6,6 +6,7 @@ import UserForm from './PokemonComponents/UserForm';
 import PokeDex from './PokemonComponents/Pokedex';
 import Footer from './PokemonComponents/Footer';
 
+
 function PokemonApp() {
 // setting the states
   const [pokemon, setPokemon] = useState([]);
@@ -67,7 +68,7 @@ function PokemonApp() {
                   abilities={abilities}
                   setAbilities={setAbilities}
               />
-          </section>
+        </section>
           
           <div className="pokemonApp">
             <div className={`flexContainerRow ${theme}`}>

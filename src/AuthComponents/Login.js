@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button, Card, Alert } from "react-bootstrap";
+
 import { useRef } from "react";
 import { useAuth } from "../contexts/AuthContexts";
 import { Link, useNavigate } from "react-router-dom";
@@ -27,36 +27,39 @@ const Login = () => {
      }
    
     return (
-    <>
-      <Card>
-        <Card.Body>
-          <h2 className="text-center mb-4">Log In</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
+   <div>
+      <h2>Log In</h2>
+          {error && <div className="danger">{error}</div>}
           <form onSubmit={handleSubmit}>
-            <Form.Group id="email">
-              <Form.Label>Email</Form.Label>
-              <Form.Control type="email" ref={emailRef} required />
-            </Form.Group>
+            <input 
+            id="email"
+            type='email' 
+            ref={emailRef}
+            required
+            placeholder="Enter your email"
+            >
+            </input>
 
-            <Form.Group id="password" className="mb-3">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" ref={passwordRef} required />
-            </Form.Group>
+           <input 
+            id="password"
+            type='password'
+            ref={passwordRef}
+            required
+            placeholder='Enter your password'
+            >
+            </input>
 
-
-            <Button disabled={loading} className="w-100" type="submit">
+            <button disabled={loading} type="submit">
               Log In
-            </Button>
+            </button>
         </form>
-        <div className="w-100 text-center mt-3">
+         <div>
             <Link to="/forgotpassword">Forgot Password</Link>
         </div>
-        </Card.Body> 
-     </Card> 
-      <div className="w-100 text-center mt-2">
-       Need an account? <Link to="/signup">Sign Up</Link>
+      <div>
+        Need an Account? <Link to="/signup">Sign Up</Link>
       </div>
-    </>
+    </div>
   )
 }
 
