@@ -51,8 +51,8 @@ const Login = () => {
         <div className="w-100 text-center mt-3">
             <Link to="/forgotpassword">Forgot Password</Link>
         </div>
-        </Card.Body>
-      </Card>
+        </Card.Body> 
+     </Card> 
       <div className="w-100 text-center mt-2">
        Need an account? <Link to="/signup">Sign Up</Link>
       </div>
